@@ -68,9 +68,7 @@ LiquidCrystal lcd(8,9,10,11,12,13);
  * the input and output from the USB port. We must keep a count of the bytes used while reading
  * the serial port as we can easily run out of buffer space. This is done in the serial_in_count variable.
  */
-char serial_in[32], c[30], b[30], printBuff[32];
-int count = 0;
-unsigned char serial_in_count = 0;
+char c[30], b[30];
 
 /**
  * We need to carefully pick assignment of pin for various purposes.
@@ -554,7 +552,6 @@ void setup()
   int32_t cal;
   
   lcd.begin(16, 2);
-  printBuff[0] = 0;
   printLine1("Raduino v1.01"); 
   printLine2("             "); 
     
