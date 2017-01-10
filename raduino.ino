@@ -301,9 +301,7 @@ void calibrate(){
  * Thus, setting the VFO on either side of the BFO will flip between the USB and LSB signals.
  */
 
-void setFrequency(unsigned long f){
-  uint64_t osc_f;
-  
+void setFrequency(unsigned long f){  
   if (isUSB){
     si5351.set_freq_manual((bfo_freq + f) * 100ULL, SI5351_PLL_FIXED, SI5351_CLK2);
   }
