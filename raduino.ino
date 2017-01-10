@@ -196,12 +196,8 @@ long frequency, stepSize=100000;
  */
 
 void printLine1(char *c){
-  if (strcmp(c, printBuff)){
     lcd.setCursor(0, 0);
     lcd.print(c);
-    strcpy(printBuff, c);
-    count++;
-  }
 }
 
 void printLine2(char *c){
